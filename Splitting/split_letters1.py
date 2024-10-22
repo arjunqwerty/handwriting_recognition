@@ -92,7 +92,7 @@ def extract_letters(image_path, output_folder):
 
 # Example usage
 # image_path = 'path_to_image.png'  # Path to your image containing text
-output_folder = 'output_letters'  # Folder where the extracted letters will be saved
+output_folder = 'output_letters2'  # Folder where the extracted letters will be saved
 
 if os.path.exists(output_folder):
     shutil.rmtree(output_folder)
@@ -100,5 +100,5 @@ os.makedirs(output_folder)
 
 # Call the function to extract letters
 # extract_letters("k1.jpg", output_folder)
-extract_letters("a1.jpg", output_folder)
-# extract_letters("l1.jpg", output_folder)
+# extract_letters("a1.jpg", output_folder)
+extract_letters("l11.jpg", output_folder)
