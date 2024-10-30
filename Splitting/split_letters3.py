@@ -161,13 +161,13 @@ def extract_words(image_path, output_folder):
 
 # Example usage
 # image_path = 'path_to_image.png'  # Path to your image containing text
-output_folder = 'output_letters'  # Folder where the extracted letters will be saved
+output_folder = 'output_letters_3'  # Folder where the extracted letters will be saved
 
 if os.path.exists(output_folder):
     shutil.rmtree(output_folder)
 os.makedirs(output_folder)
 
 # Call the function to extract letters
-extract_words("k1.jpg", output_folder)
+# extract_words("k1.jpg", output_folder)
 # extract_words("a1.jpg", output_folder)
-# extract_words("l1.jpg", output_folder)
+extract_words("l11.jpg", output_folder)

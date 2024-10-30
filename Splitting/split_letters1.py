@@ -74,7 +74,7 @@ def extract_letters(image_path, output_folder):
     for idx, line in enumerate(lines):
         # Split each line into letters
         letters, line_img = split_line_into_letters(thresh_img[0], line)
-        cv2.imwrite(f"{output_folder}/lines_{idx}.png", line_img)
+        cv2.imwrite(f"{output_folder}/line_{idx}.png", line_img)
         for jdx, (x, y, w, h) in enumerate(letters):
             # minh = min(minh, h)
             # size.append([h, w])
@@ -92,7 +92,7 @@ def extract_letters(image_path, output_folder):
 
 # Example usage
 # image_path = 'path_to_image.png'  # Path to your image containing text
-output_folder = 'output_letters2'  # Folder where the extracted letters will be saved
+output_folder = 'output_letters_1'  # Folder where the extracted letters will be saved
 
 if os.path.exists(output_folder):
     shutil.rmtree(output_folder)

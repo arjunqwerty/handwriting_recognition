@@ -78,24 +78,24 @@ def extract_letters(image_path, output_folder):
         # Split each line into letters
         letters, line_img = split_line_into_letters(thresh_img, line)
         
-        # for jdx, (start, end) in enumerate(letters):
-        #     # Extract the letter image
-        #     letter_img = line_img[:, start:end]
+        for jdx, (start, end) in enumerate(letters):
+            # Extract the letter image
+            letter_img = line_img[:, start:end]
             
-        #     # Save the letter image
-        #     letter_filename = f"{output_folder}/letter_{idx}_{jdx}.png"
-        #     cv2.imwrite(letter_filename, letter_img)
+            # Save the letter image
+            letter_filename = f"{output_folder}/letter_{idx}_{jdx}.png"
+            cv2.imwrite(letter_filename, letter_img)
             
-        #     letter_count += 1
+            letter_count += 1
         # if line_img.shape[0] > 20:
-        cv2.imwrite(f"{output_folder}/letter_{idx}.png", line_img)
+        cv2.imwrite(f"{output_folder}/line_{idx}.png", line_img)
         letter_count += 1
             
     print(f"Extracted {letter_count} letters.")
 
 # Example usage
 image_path = 'l11.jpg'  # Path to your image containing text
-output_folder = 'output_letters1'  # Folder where the extracted letters will be saved
+output_folder = 'output_letters_0'  # Folder where the extracted letters will be saved
 f = open("lines.txt",'w')
 # Call the function to extract letters
 extract_letters(image_path, output_folder)

@@ -86,7 +86,7 @@ def extract_and_visualize_lines(image_path, output_folder, visualization_path):
 
 # Example usage
 image_path = 'l11.jpg'  # Path to your image containing text
-output_folder = 'output_letters1'  # Folder where the extracted lines will be saved (optional)
+output_folder = 'output_letters_4'  # Folder where the extracted lines will be saved (optional)
 visualization_path = 'split.png'  # Path to save the visualized image
 
 # Call the function to extract and visualize lines
